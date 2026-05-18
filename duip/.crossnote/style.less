@@ -1,0 +1,51 @@
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+// .markdown-preview.markdown-preview {
+//   // modify your style here
+//   // eg: background-color: blue;
+// }
+// .markdown-preview.markdown-preview {
+//   // modify your style here
+//   // eg: background-color: blue;
+//   font-family: Microsoft YaHei;
+//   /* prince设置参数 */
+//   &.prince {
+//     /* 添加页码 */
+//     @page {
+//       @bottom {
+//         font-family: Microsoft YaHei;
+//         content: counter(page) " / " counter(pages)
+//       }
+//     }
+//   }
+// }
+  .markdown-preview.markdown-preview {
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 10pt;     /* 正文字号 */
+  line-height: 1.5;     /* 行距可以适度调紧 */
+}
+
+/* 如果你还想让标题比正文大一点/小一点： */
+.markdown-preview.markdown-preview h1 {
+  font-size: 16pt;
+}
+.markdown-preview.markdown-preview h2 {
+  font-size: 14pt;
+}
+.markdown-preview.markdown-preview h3 {
+  font-size: 12pt;
+}
+
+/* prince 模式下页码字体也调小 */
+.markdown-preview.markdown-preview.prince {
+  @page {
+    @bottom-center {
+      font-family: "Microsoft YaHei", sans-serif;
+      font-size: 8pt;    /* 页码更小 */
+      content: counter(page) " / " counter(pages);
+    }
+  }
+}
+
